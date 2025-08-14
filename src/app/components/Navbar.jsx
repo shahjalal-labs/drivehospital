@@ -6,17 +6,7 @@ const navItems = (
       <a>Item 1</a>
     </li>
     <li>
-      <details>
-        <summary>Parent</summary>
-        <ul className="p-2">
-          <li>
-            <a>Submenu 1</a>
-          </li>
-          <li>
-            <a>Submenu 2</a>
-          </li>
-        </ul>
-      </details>
+      <a>Item 2</a>
     </li>
     <li>
       <a>Item 3</a>
@@ -26,7 +16,7 @@ const navItems = (
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-sky-100/30 shadow-sm sticky top-0 z-50 backdrop-blur-md">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -49,10 +39,12 @@ const Navbar = () => {
           <ul
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
-          >{navItems}</ul>
+          >
+            {navItems}
+          </ul>
         </div>
         <Link href="/" className="btn btn-ghost text-xl">
-          drive <span>Hospital</span>
+          Drive <span>Hospital</span>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">

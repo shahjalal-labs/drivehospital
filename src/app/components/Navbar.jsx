@@ -3,13 +3,16 @@ import Link from "next/link";
 const navItems = (
   <>
     <li>
-      <a>Item 1</a>
+      <Link href="/">Home</Link>
     </li>
     <li>
-      <a>Item 2</a>
+      <Link href="/about">About</Link>
     </li>
     <li>
-      <a>Item 3</a>
+      <Link href="/services">Services</Link>
+    </li>
+    <li>
+      <Link href="/services">Blogs</Link>
     </li>
   </>
 );
@@ -50,8 +53,13 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navItems}</ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn">Button</a>
+      <div className="navbar-end space-x-4">
+        <Link href="/auth/signin" className="btn rounded-full">
+          Sign in
+        </Link>
+        <Link href="/auth/signin" className="btn rounded-full">
+          Register
+        </Link>
       </div>
     </div>
   );

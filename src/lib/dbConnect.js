@@ -10,6 +10,6 @@ const client = new MongoClient(uri, {
   },
 });
 
-export default function run(collectionName) {
+export default function dbConnect(collectionName) {
   return client.db(process.env.DB_NAME).collection(collectionName);
 }

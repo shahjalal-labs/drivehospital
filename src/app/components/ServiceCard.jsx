@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const ServiceCard = ({ service }) => {
   return (
@@ -25,7 +26,7 @@ const ServiceCard = ({ service }) => {
             ${service.price}
           </span>
           <button className="px-4 py-2 text-white text-sm transition btn btn-info btn-outline rounded-full">
-            View Details
+            <Link href={`/services/${service._id}`}>View Details</Link>
           </button>
         </div>
       </div>

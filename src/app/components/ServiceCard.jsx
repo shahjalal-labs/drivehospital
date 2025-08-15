@@ -1,11 +1,16 @@
+import Image from "next/image";
+
 const ServiceCard = ({ service }) => {
   return (
     <div className="bg-gray-900 border border-gray-700 rounded-xl shadow-lg hover:shadow-xl hover:border-indigo-500 transition-all duration-300 overflow-hidden">
-      <img
-        src={service.img}
-        alt={service.title}
-        className="w-full h-48 object-cover hover:scale-105 transform transition duration-300"
-      />
+      <div className="relative w-full h-48">
+        <Image
+          src={service.img}
+          alt={service.title}
+          fill
+          className="object-cover"
+        />
+      </div>
 
       <div className="p-5">
         <h2 className="text-lg font-bold text-indigo-400 mb-2">
@@ -16,10 +21,10 @@ const ServiceCard = ({ service }) => {
         </p>
 
         <div className="flex items-center justify-between">
-          <span className="text-indigo-300 font-semibold text-lg">
+          <span className="text-indigo-300 font-semibold text-lg badge badge-primary badge-outline">
             ${service.price}
           </span>
-          <button className="px-4 py-2  text-white text-sm rounded-lg  transition btn btn-info btn-outline">
+          <button className="px-4 py-2 text-white text-sm transition btn btn-info btn-outline rounded-full">
             View Details
           </button>
         </div>

@@ -1,3 +1,4 @@
+//src/app/api/services/route.js
 import dbConnect, { collectionsNameObj } from "@/lib/dbConnect";
 import { NextResponse } from "next/server";
 

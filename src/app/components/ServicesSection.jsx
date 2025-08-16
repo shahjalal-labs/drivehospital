@@ -2,10 +2,8 @@ import dbConnect, { collectionsNameObj } from "@/lib/dbConnect";
 import ServiceCard from "./ServiceCard";
 
 const ServicesSection = async () => {
-  // const servicesCollection = dbConnect(collectionsNameObj.servicesCollection);
-  const res = await fetch("http://localhost:3000/api/services");
-
-  const services = await res.json();
+  const servicesCollection = dbConnect(collectionsNameObj.servicesCollection);
+  const services = await servicesCollection.find().toArray();
   console.log(services, "ServicesSection.jsx", 6);
   return (
     <div>

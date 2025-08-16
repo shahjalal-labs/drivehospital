@@ -1,12 +1,11 @@
-import dbConnect, { collectionsNameObj } from "@/lib/dbConnect";
-import { ObjectId } from "mongodb";
-
 const ServicesDetails = async ({ params }) => {
   const p = await params;
 
-  const serviceCollection = dbConnect(collectionsNameObj.servicesCollection);
-  const query = { _id: new ObjectId(p.id) };
-  const service = await serviceCollection.findOne(query);
+  const res = await fetch(`http://localhost:3000/api/services/${p.id}`);
+  const servicedata = await res.json();
+
+  const { data: service } = servicedata;
+  console.log(service, "service page.jsx", 6);
 
   if (!service) {
     return (

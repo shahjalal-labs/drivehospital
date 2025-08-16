@@ -13,7 +13,7 @@ export async function GET(request, { params }) {
   ).findOne({ _id: new ObjectId(id) });
 
   console.log(service, "route.jsx", 9);
-  NextResponse.json({
+  return NextResponse.json({
     success: true,
     status: 200,
     data: service,

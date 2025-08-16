@@ -1,7 +1,9 @@
+import Link from "next/link";
+
 const ServicesDetails = async ({ params }) => {
   const p = await params;
 
-  const res = await fetch(`http://localhost:3000/api/services/${p.id}`);
+  const res = await fetch(`http://localhost:3000/api/services/${p?.id}`);
   const servicedata = await res.json();
 
   const { data: service } = servicedata;
@@ -61,9 +63,12 @@ const ServicesDetails = async ({ params }) => {
 
           {/* Button */}
           <div className="mt-6 flex justify-end">
-            <button className="btn btn-primary btn-lg shadow-lg hover:scale-105 transition-transform duration-300">
+            <Link
+              href={`/checkout/${p.id}`}
+              className="btn btn-primary btn-lg shadow-lg hover:scale-105 transition-transform duration-300"
+            >
               Book Now 🚗
-            </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -15,24 +15,37 @@
 │   ├── file.svg
 │   ├── globe.svg
 │   ├── next.svg
+│   ├── serviceData.json
 │   ├── vercel.svg
 │   └── window.svg
 ├── README.md
 ├── src
 │   ├── app
+│   │   ├── api
+│   │   │   └── service
+│   │   │       └── [id]
+│   │   │           ├── route.jsx
+│   │   │           └── serviceAPI.hurl
 │   │   ├── components
-│   │   │   └── Navbar.jsx
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── ServiceCard.jsx
+│   │   │   └── ServicesSection.jsx
 │   │   ├── favicon.ico
 │   │   ├── globals.css
 │   │   ├── layout.js
+│   │   ├── loading.jsx
 │   │   ├── not-found.jsx
-│   │   └── page.js
+│   │   ├── page.js
+│   │   └── services
+│   │       ├── [id]
+│   │       │   └── page.jsx
+│   │       └── page.jsx
 │   ├── docs
 │   │   └── cli_commands.md
 │   └── lib
 │       └── dbConnect.js
 └── structure.md
 
-8 directories, 23 files
+13 directories, 31 files
 
 ```

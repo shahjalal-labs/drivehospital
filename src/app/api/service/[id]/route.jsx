@@ -1,3 +1,4 @@
+//src/app/api/service/[id]/route.jsx
 import dbConnect, { collectionsNameObj } from "@/lib/dbConnect";
 import { ObjectId } from "mongodb";
 import { NextResponse } from "next/server";
@@ -9,7 +10,7 @@ export async function GET(request, { params }) {
 
   const service = await dbConnect(
     collectionsNameObj.servicesCollection,
-  ).findOne({ _id: ObjectId(id) });
+  ).findOne({ _id: new ObjectId(id) });
 
   console.log(service, "route.jsx", 9);
   NextResponse.json({

@@ -1,19 +1,17 @@
 const Footer = () => {
   return (
+    <div className="w-full relative bg-black">
+      {/* Background with top glow */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          background:
+            "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(99, 102, 241, 0.25), transparent 70%), #000000",
+        }}
+      />
 
-    <div className="min-h-screen w-full relative bg-black">
-    {/* X Organizations Black Background with Top Glow */}
-    <div
-      className="absolute inset-0 z-0"
-      style={{
-       background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(120, 180, 255, 0.25), transparent 70%), #000000",
-      }}
-    />
-  
-    {/* Your Content/Components */}
-  </div>
-    <div className="relative z-10">
-      <footer className="footer sm:footer-horizontal g-neutral text-neutral-content grid-rows-2 p-10">
+      {/* Footer Content */}
+      <footer className="relative z-10 footer sm:footer-horizontal text-neutral-content grid-rows-2 p-10 mx-auto max-w-11/12">
         <nav>
           <h6 className="footer-title">Services</h6>
           <a className="link link-hover">Branding</a>

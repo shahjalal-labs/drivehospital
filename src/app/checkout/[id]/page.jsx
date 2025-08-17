@@ -11,12 +11,12 @@ const CheckoutPage = async ({ params }) => {
   return (
     <div>
       <h2>Checkout</h2>
-      <div className="flex ">
-        <div className="w-full">
+      <div className="flex divide-x divide-gray-500 h-screen">
+        <div className="w-full h-full">
           <h2>Shipping Address</h2>
           <CheckoutForm />
         </div>
-        <div className="w-full">
+        <div className="w-full h-full">
           <h2>Review your order</h2>
         </div>
       </div>

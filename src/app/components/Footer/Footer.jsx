@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Footer = () => {
   return (
     <div className="w-full relative bg-black">
@@ -11,47 +13,109 @@ const Footer = () => {
       />
 
       {/* Footer Content */}
-      <footer className="relative z-10 footer sm:footer-horizontal text-neutral-content grid-rows-2 p-10 mx-auto max-w-11/12">
+      <footer className="relative z-10 grid footer text-neutral-content grid-rows-2 p-10 mx-auto max-w-11/12">
         <nav>
           <h6 className="footer-title">Services</h6>
-          <a className="link link-hover">Branding</a>
-          <a className="link link-hover">Design</a>
-          <a className="link link-hover">Marketing</a>
-          <a className="link link-hover">Advertisement</a>
+          <Link href="/services/branding" className="link link-hover">
+            Branding
+          </Link>
+          <Link href="/services/design" className="link link-hover">
+            Design
+          </Link>
+          <Link href="/services/marketing" className="link link-hover">
+            Marketing
+          </Link>
+          <Link href="/services/advertisement" className="link link-hover">
+            Advertisement
+          </Link>
         </nav>
         <nav>
           <h6 className="footer-title">Company</h6>
-          <a className="link link-hover">About us</a>
-          <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
-          <a className="link link-hover">Press kit</a>
+          <Link href="/about" className="link link-hover">
+            About us
+          </Link>
+          <Link href="/contact" className="link link-hover">
+            Contact
+          </Link>
+          <Link href="/jobs" className="link link-hover">
+            Jobs
+          </Link>
+          <Link href="/press" className="link link-hover">
+            Press kit
+          </Link>
         </nav>
         <nav>
           <h6 className="footer-title">Legal</h6>
-          <a className="link link-hover">Terms of use</a>
-          <a className="link link-hover">Privacy policy</a>
-          <a className="link link-hover">Cookie policy</a>
+          <Link href="/terms" className="link link-hover">
+            Terms of use
+          </Link>
+          <Link href="/privacy" className="link link-hover">
+            Privacy policy
+          </Link>
+          <Link href="/cookies" className="link link-hover">
+            Cookie policy
+          </Link>
         </nav>
         <nav>
           <h6 className="footer-title">Social</h6>
-          <a className="link link-hover">Twitter</a>
-          <a className="link link-hover">Instagram</a>
-          <a className="link link-hover">Facebook</a>
-          <a className="link link-hover">GitHub</a>
+          <Link
+            href="https://twitter.com"
+            target="_blank"
+            className="link link-hover"
+          >
+            Twitter
+          </Link>
+          <Link
+            href="https://instagram.com"
+            target="_blank"
+            className="link link-hover"
+          >
+            Instagram
+          </Link>
+          <Link
+            href="https://facebook.com"
+            target="_blank"
+            className="link link-hover"
+          >
+            Facebook
+          </Link>
+          <Link
+            href="https://github.com"
+            target="_blank"
+            className="link link-hover"
+          >
+            GitHub
+          </Link>
         </nav>
         <nav>
           <h6 className="footer-title">Explore</h6>
-          <a className="link link-hover">Features</a>
-          <a className="link link-hover">Enterprise</a>
-          <a className="link link-hover">Security</a>
-          <a className="link link-hover">Pricing</a>
+          <Link href="/features" className="link link-hover">
+            Features
+          </Link>
+          <Link href="/enterprise" className="link link-hover">
+            Enterprise
+          </Link>
+          <Link href="/security" className="link link-hover">
+            Security
+          </Link>
+          <Link href="/pricing" className="link link-hover">
+            Pricing
+          </Link>
         </nav>
         <nav>
           <h6 className="footer-title">Apps</h6>
-          <a className="link link-hover">Mac</a>
-          <a className="link link-hover">Windows</a>
-          <a className="link link-hover">iPhone</a>
-          <a className="link link-hover">Android</a>
+          <Link href="/apps/mac" className="link link-hover">
+            Mac
+          </Link>
+          <Link href="/apps/windows" className="link link-hover">
+            Windows
+          </Link>
+          <Link href="/apps/iphone" className="link link-hover">
+            iPhone
+          </Link>
+          <Link href="/apps/android" className="link link-hover">
+            Android
+          </Link>
         </nav>
       </footer>
     </div>

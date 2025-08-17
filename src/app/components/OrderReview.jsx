@@ -1,7 +1,6 @@
 "use client";
 
 export default function OrderReview({ service }) {
-  console.log(service, "OrderReview.jsx", 4);
   return (
     <div className="bg-gray-900 p-6 rounded-2xl shadow-lg text-gray-200">
       <h3 className="text-xl font-semibold text-white mb-4">

@@ -16,7 +16,7 @@ const CheckoutPage = async ({ params }) => {
     <div>
       <div className="md:flex divide-x divide-gray-500 ">
         <div className="w-full ">
-          <CheckoutForm />
+          <CheckoutForm service={service} />
         </div>
         <div className="w-full ">
           <OrderReview service={service} />

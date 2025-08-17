@@ -1,9 +1,10 @@
 "use client";
 import { useState } from "react";
 
-export default function CheckoutForm({ onSubmit }) {
+export default function CheckoutForm({ service }) {
+  console.log(service, "service CheckoutForm.jsx", 5);
   const [formData, setFormData] = useState({
-    fullName: "",
+    name: "",
     email: "",
     address: "",
     city: "",
@@ -17,7 +18,14 @@ export default function CheckoutForm({ onSubmit }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form Data:", formData);
-    onSubmit?.(formData);
+
+    const bookingPayload = {
+      ...formData,
+      service_id: service?._id,
+      serviceName: service?.title,
+      serviceImg: service?.img,
+      servicePrice: service?.price,
+    };
   };
 
   return (
@@ -34,10 +42,11 @@ export default function CheckoutForm({ onSubmit }) {
 
         <input
           type="text"
-          name="fullName"
+          name="name"
           placeholder="Full Name"
           value={formData.fullName}
           onChange={handleChange}
+          required
           className="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 
               focus:ring-2 focus:ring-purple-500 outline-none"
         />
@@ -47,6 +56,7 @@ export default function CheckoutForm({ onSubmit }) {
           name="email"
           placeholder="Email Address"
           value={formData.email}
+          required
           onChange={handleChange}
           className="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 
               focus:ring-2 focus:ring-purple-500 outline-none"
@@ -54,6 +64,7 @@ export default function CheckoutForm({ onSubmit }) {
 
         <input
           type="text"
+          required
           name="address"
           placeholder="Street Address"
           value={formData.address}

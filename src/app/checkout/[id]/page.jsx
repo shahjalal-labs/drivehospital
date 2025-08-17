@@ -1,4 +1,5 @@
 import CheckoutForm from "@/app/components/CheckoutForm";
+import OrderReview from "@/app/components/OrderReview";
 
 const CheckoutPage = async ({ params }) => {
   const p = await params;
@@ -11,13 +12,13 @@ const CheckoutPage = async ({ params }) => {
   return (
     <div>
       <h2>Checkout</h2>
-      <div className="flex divide-x divide-gray-500 h-screen">
+      <div className="md:flex divide-x divide-gray-500 h-screen">
         <div className="w-full h-full">
           <h2>Shipping Address</h2>
           <CheckoutForm />
         </div>
         <div className="w-full h-full">
-          <h2>Review your order</h2>
+          <OrderReview service={service} />
         </div>
       </div>
     </div>

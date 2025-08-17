@@ -13,7 +13,7 @@ const Footer = () => {
       />
 
       {/* Footer Content */}
-      <footer className="relative z-10 grid footer text-neutral-content grid-rows-2 p-10 mx-auto max-w-11/12">
+      <footer className="relative z-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 footer text-neutral-content  p-10 mx-auto max-w-11/12">
         <nav>
           <h6 className="footer-title">Services</h6>
           <Link href="/services/branding" className="link link-hover">
@@ -100,21 +100,6 @@ const Footer = () => {
           </Link>
           <Link href="/pricing" className="link link-hover">
             Pricing
-          </Link>
-        </nav>
-        <nav>
-          <h6 className="footer-title">Apps</h6>
-          <Link href="/apps/mac" className="link link-hover">
-            Mac
-          </Link>
-          <Link href="/apps/windows" className="link link-hover">
-            Windows
-          </Link>
-          <Link href="/apps/iphone" className="link link-hover">
-            iPhone
-          </Link>
-          <Link href="/apps/android" className="link link-hover">
-            Android
           </Link>
         </nav>
       </footer>

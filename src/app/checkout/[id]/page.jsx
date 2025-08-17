@@ -10,8 +10,16 @@ const CheckoutPage = async ({ params }) => {
 
   return (
     <div>
-      <h2>CheckoutDetails</h2>
-      <CheckoutForm />
+      <h2>Checkout</h2>
+      <div className="flex ">
+        <div className="w-full">
+          <h2>Shipping Address</h2>
+          <CheckoutForm />
+        </div>
+        <div className="w-full">
+          <h2>Review your order</h2>
+        </div>
+      </div>
     </div>
   );
 };

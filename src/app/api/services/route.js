@@ -13,3 +13,9 @@ export const GET = async () => {
     data: services,
   });
 };
+
+export const POST = async (request) => {
+  console.log(request, " request route.js", 18);
+  const body = await request.json();
+  console.log(body, "body route.js", 20);
+};

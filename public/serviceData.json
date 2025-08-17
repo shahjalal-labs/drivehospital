@@ -4,23 +4,23 @@
     "title": "Engine Oil Change",
     "img": "https://i.ibb.co/T2cpBd5/888.jpg",
     "price": "20.00",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nostrum dolores nemo quas. Minima ullam, veniam, nesciunt quae dolore animi blanditiis deserunt, ea esse dolorum ipsum quibusdam ipsa! Corrupti at, excepturi, fugiat aut nihil neque aliquid sapiente dignissimos provident, animi molestiae ipsum. Repudiandae ipsa id nihil reiciendis soluta eos ducimus pariatur, nam architecto tenetur quo quos commodi est libero repellendus vitae. Fuga numquam nulla nam, facere neque expedita voluptatibus pariatur necessitatibus vel, dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum. Aspernatur ex quibusdam at cum nulla!",
+    "description": "Regular oil changes keep your engine running smoothly and extend the life of your vehicle. Our oil change service includes draining old oil, replacing the oil filter, and refilling with high-quality engine oil suitable for your car.",
     "facility": [
       {
         "name": "Instant Car Services",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+        "details": "Quick and efficient oil change service to get you back on the road fast."
       },
       {
         "name": "24/7 Quality Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+        "details": "Available anytime to ensure your engine runs at peak performance."
       },
       {
         "name": "Easy Customer Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+        "details": "Friendly support to guide you on the best oil options for your vehicle."
       },
       {
         "name": "Quality Cost Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+        "details": "Affordable pricing without compromising oil quality."
       }
     ]
   },
@@ -29,48 +29,48 @@
     "title": "Battery Charge",
     "img": "https://i.ibb.co/ydCbDN3/5555.jpg",
     "price": "20.00",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nostrum dolores nemo quas. Minima ullam, veniam, nesciunt quae dolore animi blanditiis deserunt, ea esse dolorum ipsum quibusdam ipsa! Corrupti at, excepturi, fugiat aut nihil neque aliquid sapiente dignissimos provident, animi molestiae ipsum. Repudiandae ipsa id nihil reiciendis soluta eos ducimus pariatur, nam architecto tenetur quo quos commodi est libero repellendus vitae. Fuga numquam nulla nam, facere neque expedita voluptatibus pariatur necessitatibus vel, dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum. Aspernatur ex quibusdam at cum nulla!",
+    "description": "Our battery charging service restores your car’s battery power and ensures reliable starting. We use professional-grade chargers and also inspect the battery’s overall health to prevent future issues.",
     "facility": [
       {
         "name": "Instant Car Services",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+        "details": "Fast battery charging and testing to avoid delays."
       },
       {
         "name": "24/7 Quality Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+        "details": "Emergency battery charging available anytime, anywhere."
       },
       {
         "name": "Easy Customer Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+        "details": "Step-by-step assistance to keep your battery in good condition."
       },
       {
         "name": "Quality Cost Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+        "details": "Cost-effective solution with no hidden charges."
       }
     ]
   },
   {
     "service_id": "01",
-    "title": "Full car Repair",
+    "title": "Full Car Repair",
     "img": "https://i.ibb.co/R6Z2nFM/55.jpg",
     "price": "200.00",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nostrum dolores nemo quas. Minima ullam, veniam, nesciunt quae dolore animi blanditiis deserunt, ea esse dolorum ipsum quibusdam ipsa! Corrupti at, excepturi, fugiat aut nihil neque aliquid sapiente dignissimos provident, animi molestiae ipsum. Repudiandae ipsa id nihil reiciendis soluta eos ducimus pariatur, nam architecto tenetur quo quos commodi est libero repellendus vitae. Fuga numquam nulla nam, facere neque expedita voluptatibus pariatur necessitatibus vel, dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum. Aspernatur ex quibusdam at cum nulla!",
+    "description": "A complete car repair package that covers mechanical, electrical, and bodywork issues. Our certified technicians perform a full inspection, diagnose problems, and provide reliable repair solutions to keep your vehicle safe and roadworthy.",
     "facility": [
       {
         "name": "Instant Car Services",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+        "details": "Comprehensive repair services under one roof."
       },
       {
         "name": "24/7 Quality Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+        "details": "Round-the-clock support for urgent repairs."
       },
       {
         "name": "Easy Customer Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+        "details": "Clear communication and transparent repair process."
       },
       {
         "name": "Quality Cost Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+        "details": "Value-for-money repair packages tailored to your needs."
       }
     ]
   },
@@ -79,23 +79,23 @@
     "title": "Engine Repair",
     "img": "https://i.ibb.co/5MvmD2g/88.jpg",
     "price": "150.00",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nostrum dolores nemo quas. Minima ullam, veniam, nesciunt quae dolore animi blanditiis deserunt, ea esse dolorum ipsum quibusdam ipsa! Corrupti at, excepturi, fugiat aut nihil neque aliquid sapiente dignissimos provident, animi molestiae ipsum. Repudiandae ipsa id nihil reiciendis soluta eos ducimus pariatur, nam architecto tenetur quo quos commodi est libero repellendus vitae. Fuga numquam nulla nam, facere neque expedita voluptatibus pariatur necessitatibus vel, dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum. Aspernatur ex quibusdam at cum nulla!",
+    "description": "Our engine repair service addresses issues such as overheating, unusual noises, loss of power, and fuel inefficiency. We use advanced diagnostic tools to identify engine problems and restore it to optimal condition.",
     "facility": [
       {
         "name": "Instant Car Services",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+        "details": "Skilled mechanics for quick and accurate engine repairs."
       },
       {
         "name": "24/7 Quality Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+        "details": "Emergency engine repair service available anytime."
       },
       {
         "name": "Easy Customer Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+        "details": "We explain the issue and repair steps in simple terms."
       },
       {
         "name": "Quality Cost Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+        "details": "Affordable repair options without compromising quality."
       }
     ]
   },
@@ -104,23 +104,23 @@
     "title": "Automatic Services",
     "img": "https://i.ibb.co/wh7t3N3/555.jpg",
     "price": "30.00",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nostrum dolores nemo quas. Minima ullam, veniam, nesciunt quae dolore animi blanditiis deserunt, ea esse dolorum ipsum quibusdam ipsa! Corrupti at, excepturi, fugiat aut nihil neque aliquid sapiente dignissimos provident, animi molestiae ipsum. Repudiandae ipsa id nihil reiciendis soluta eos ducimus pariatur, nam architecto tenetur quo quos commodi est libero repellendus vitae. Fuga numquam nulla nam, facere neque expedita voluptatibus pariatur necessitatibus vel, dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum. Aspernatur ex quibusdam at cum nulla!",
+    "description": "Our automatic car services include transmission fluid replacement, system diagnostics, and maintenance for automatic gear systems. We ensure smooth gear shifting and prolong the life of your transmission system.",
     "facility": [
       {
         "name": "Instant Car Services",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+        "details": "Quick maintenance for all types of automatic vehicles."
       },
       {
         "name": "24/7 Quality Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+        "details": "Round-the-clock support for sudden transmission issues."
       },
       {
         "name": "Easy Customer Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+        "details": "We help you understand automatic system care and tips."
       },
       {
         "name": "Quality Cost Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+        "details": "Affordable pricing for high-quality transmission services."
       }
     ]
   },
@@ -129,23 +129,23 @@
     "title": "Electrical System",
     "img": "https://i.ibb.co/KzCG8qr/8888.jpg",
     "price": "20.00",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nostrum dolores nemo quas. Minima ullam, veniam, nesciunt quae dolore animi blanditiis deserunt, ea esse dolorum ipsum quibusdam ipsa! Corrupti at, excepturi, fugiat aut nihil neque aliquid sapiente dignissimos provident, animi molestiae ipsum. Repudiandae ipsa id nihil reiciendis soluta eos ducimus pariatur, nam architecto tenetur quo quos commodi est libero repellendus vitae. Fuga numquam nulla nam, facere neque expedita voluptatibus pariatur necessitatibus vel, dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum. Aspernatur ex quibusdam at cum nulla!",
+    "description": "We provide expert electrical system diagnostics and repairs, covering lights, wiring, alternators, starters, and sensors. Our service ensures your car’s electrical components work reliably and safely.",
     "facility": [
       {
         "name": "Instant Car Services",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+        "details": "Accurate troubleshooting of complex electrical issues."
       },
       {
         "name": "24/7 Quality Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+        "details": "Support available anytime for urgent electrical faults."
       },
       {
         "name": "Easy Customer Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+        "details": "Step-by-step updates throughout the repair process."
       },
       {
         "name": "Quality Cost Service",
-        "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+        "details": "Professional electrical service at reasonable prices."
       }
     ]
   }

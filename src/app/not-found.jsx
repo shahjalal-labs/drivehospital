@@ -2,8 +2,8 @@ import Link from "next/link";
 
 const Notfound = () => {
   return (
-    <div className="flex h-screen flex-col items-center justify-center  text-white max-w-2xl mx-auto">
-      <div className="bg-gray-900">
+    <div className="flex h-screen flex-col items-center justify-center  text-white max-w-4xl mx-auto">
+      <div className="bg-gray-900 p-6 rounded-xl  text-center">
         <h1 className="text-9xl font-extrabold tracking-widest text-gray-200">
           404
         </h1>

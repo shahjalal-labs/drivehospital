@@ -3,7 +3,10 @@ import Link from "next/link";
 const ServicesDetails = async ({ params }) => {
   const p = await params;
 
-  const res = await fetch(`http://localhost:3000/api/services/${p?.id}`);
+  // const res = await fetch(`http://localhost:3000/api/services/${p?.id}`);
+  const res = await fetch(
+    `https://drivehospital.vercel.app/api/services/${p?.id}`,
+  );
   const servicedata = await res.json();
 
   const { data: service } = servicedata;

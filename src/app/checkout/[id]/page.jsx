@@ -9,6 +9,7 @@ const CheckoutPage = async ({ params }) => {
   const { data: service } = serviceData;
 
   return (
+
     <div>
       <div className="md:flex divide-x divide-gray-500 ">
         <div className="w-full ">

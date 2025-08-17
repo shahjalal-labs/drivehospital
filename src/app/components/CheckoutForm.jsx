@@ -24,7 +24,7 @@ export default function CheckoutForm({ onSubmit }) {
     <div className="">
       <form
         onSubmit={handleSubmit}
-        className="space-y-4 bg-gray-900 p-6 rounded-2xl shadow-lg text-gray-200"
+        className="space-y-4 bg-gray-900 p-6 rounded-2xl shadow-lg text-gray-200 md:h-screen"
       >
         <h2 className="badge-xl badge-outline badge-info text-2xl font-bold -ml-4">
           Checkout

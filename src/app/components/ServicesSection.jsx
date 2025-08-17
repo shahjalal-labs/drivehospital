@@ -8,7 +8,7 @@ const ServicesSection = async () => {
   return (
     <div>
       <h1>Services Section</h1>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
         {services.map((service) => (
           <ServiceCard key={service._id} service={service} />
         ))}

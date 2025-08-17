@@ -26,8 +26,22 @@ export default function RootLayout({ children }) {
         <div className=" sticky top-0 z-50 bg-gray-900/70 backdrop-blur-lg border-b border-gray-800 shadow-md">
           <Navbar />
         </div>
-
-        <div className="max-w-11/12 mx-auto">{children}</div>
+        <div className="min-h-screen w-full bg-black relative">
+          {/* Dark White Dotted Grid Background */}
+          <div
+            className="absolute inset-0 z-0"
+            style={{
+              background: "#000000",
+              backgroundImage: `
+        radial-gradient(circle, rgba(255, 255, 255, 0.2) 1.5px, transparent 1.5px)
+      `,
+              backgroundSize: "30px 30px",
+              backgroundPosition: "0 0",
+            }}
+          />
+          ;<div className="max-w-11/12 mx-auto">{children}</div>
+          {/* Your Content/Components */}
+        </div>
       </body>
     </html>
   );

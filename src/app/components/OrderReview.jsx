@@ -1,6 +1,7 @@
 "use client";
 
-export default function OrderReview({ service, onPlaceOrder }) {
+export default function OrderReview({ service }) {
+  console.log(service, "OrderReview.jsx", 4);
   return (
     <div className="bg-gray-900 p-6 rounded-2xl shadow-lg text-gray-200">
       <h3 className="text-xl font-semibold text-white mb-4">
@@ -21,7 +22,7 @@ export default function OrderReview({ service, onPlaceOrder }) {
       </p>
 
       <p className="text-lg font-semibold text-white mb-4">
-        Price: <span className="text-green-400">${service.price}</span>
+        Price: <span className="text-green-400">${service.price || 300}</span>
       </p>
 
       <div className="space-y-2 mb-6">
@@ -36,17 +37,6 @@ export default function OrderReview({ service, onPlaceOrder }) {
           </div>
         ))}
       </div>
-
-      <button
-        onClick={() => {
-          console.log("Placing order for:", service.title);
-          onPlaceOrder?.(service);
-        }}
-        className="w-full py-3 bg-green-600 hover:bg-green-700 transition 
-        rounded-xl font-semibold text-white shadow-lg"
-      >
-        Place Order
-      </button>
     </div>
   );
 }

@@ -5,19 +5,16 @@ const CheckoutPage = async ({ params }) => {
   const p = await params;
   console.log(p.id, "dynamicId in params", 3);
   const res = await fetch(`http://localhost:3000/api/services/${p?.id}`);
-
-  const service = await res.json();
-  console.log(service, "page.jsx", 7);
+  const serviceData = await res.json();
+  const { data: service } = serviceData;
 
   return (
     <div>
-      <h2>Checkout</h2>
-      <div className="md:flex divide-x divide-gray-500 h-screen">
-        <div className="w-full h-full">
-          <h2>Shipping Address</h2>
+      <div className="md:flex divide-x divide-gray-500 ">
+        <div className="w-full ">
           <CheckoutForm />
         </div>
-        <div className="w-full h-full">
+        <div className="w-full ">
           <OrderReview service={service} />
         </div>
       </div>

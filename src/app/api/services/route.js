@@ -20,8 +20,8 @@ export const POST = async (request) => {
 
   //w: add document to bookings collection
   const res = await dbConnect(collectionsNameObj.bookingsCollection).insertOne(
-console.log(res, '/home/sj/Downloads/drivehospital/src/app/api/services/route.js', 23);
     body,
   );
+  console.log(res, "[1;31mres in route.js at line 23[0m");
   return NextResponse.json(body);
 };

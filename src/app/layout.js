@@ -45,7 +45,9 @@ export default function RootLayout({ children }) {
           />
 
           {/* Content Layer */}
-          <div className="relative z-10 max-w-11/12 mx-auto">{children}</div>
+          <div className="relative z-10 max-w-11/12 mx-auto min-h-[60vh]">
+            {children}
+          </div>
 
           <div className="">
             <Footer />

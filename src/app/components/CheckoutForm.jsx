@@ -15,9 +15,8 @@ export default function CheckoutForm({ service }) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form Data:", formData);
 
     const bookingPayload = {
       ...formData,
@@ -26,6 +25,17 @@ export default function CheckoutForm({ service }) {
       serviceImg: service?.img,
       servicePrice: service?.price,
     };
+
+    const res = await fetch(`http://localhost:3000/api/services`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(bookingPayload),
+    });
+
+    const respone = await res.json();
+    console.log(respone, "respone CheckoutForm.jsx", 38);
   };
 
   return (

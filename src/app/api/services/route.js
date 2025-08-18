@@ -15,7 +15,13 @@ export const GET = async () => {
 };
 
 export const POST = async (request) => {
-  console.log(request, " request route.js", 18);
   const body = await request.json();
   console.log(body, "body route.js", 20);
+
+  //w: add document to bookings collection
+  const res = await dbConnect(collectionsNameObj.bookingsCollection).insertOne(
+console.log(res, '/home/sj/Downloads/drivehospital/src/app/api/services/route.js', 23);
+    body,
+  );
+  return NextResponse.json(body);
 };

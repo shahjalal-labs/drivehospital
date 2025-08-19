@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function HeroSection() {
   return (
     <section className="relative text-center py-24 bg-gradient-to-r from-indigo-950 via-slate-950 to-black rounded-3xl shadow-lg shadow-indigo-900/40 overflow-hidden">
@@ -9,11 +11,11 @@ export default function HeroSection() {
           Premium car repair & maintenance service that’s always there when you
           need it.
         </p>
-        <a href="/services">
+        <Link href="/services">
           <button className="mt-8 px-8 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 transition text-white font-medium shadow-xl shadow-pink-900/50">
             Book a Service
           </button>
-        </a>
+        </Link>
       </div>
 
       {/* Decorative Glow */}

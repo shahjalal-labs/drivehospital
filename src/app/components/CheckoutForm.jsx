@@ -1,7 +1,9 @@
 "use client";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function CheckoutForm({ service }) {
+  const router = useRouter();
   console.log(service, "service CheckoutForm.jsx", 5);
   const [formData, setFormData] = useState({
     name: "",
@@ -35,6 +37,9 @@ export default function CheckoutForm({ service }) {
     });
 
     const respone = await res.json();
+    if (respone?.insertedId) {
+      router.push(`/my-bookings`);
+    }
     console.log(respone, "respone CheckoutForm.jsx", 38);
   };
 

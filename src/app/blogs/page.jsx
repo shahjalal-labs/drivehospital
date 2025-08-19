@@ -57,7 +57,7 @@ const mockPosts = [
 
 export default function BlogPage() {
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-200 px-6 lg:px-20 py-12 relative">
+    <div className="min-h-screen bg-gray-900 text-gray-200 sm:px-6 lg:px-8  py-12 relative">
       {/* Page Header */}
       <section className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
@@ -70,7 +70,7 @@ export default function BlogPage() {
       </section>
 
       {/* Blog Posts Grid */}
-      <section className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      <section className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
         {mockPosts.map((post) => (
           <div
             key={post.id}
@@ -90,7 +90,7 @@ export default function BlogPage() {
                 <span>{post.author}</span>
                 <span>{format(new Date(post.date), "MMM dd, yyyy")}</span>
               </div>
-              <Link href={`/blog/${post.slug}`}>
+              <Link href={`/blogs/${post.id}`}>
                 <button className="mt-4 px-4 py-2 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 transition text-white text-sm shadow-md shadow-pink-900/40">
                   Read More
                 </button>

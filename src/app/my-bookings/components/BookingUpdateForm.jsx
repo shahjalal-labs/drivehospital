@@ -1,5 +1,8 @@
 "use client";
 
+import updateLottie from "@/updateLottie.json";
+import LottieAnime from "@/lib/LottieAnime";
+
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
@@ -119,7 +122,9 @@ const BookingUpdateForm = ({ booking }) => {
             Update Booking
           </button>
         </form>
-        <div></div>
+        <div>
+          <LottieAnime anime={updateLottie} />
+        </div>
       </div>
     </>
   );

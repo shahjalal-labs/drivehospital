@@ -1,9 +1,11 @@
 import dbConnect, { collectionsNameObj } from "@/lib/dbConnect";
 import { ObjectId } from "mongodb";
+import Link from "next/link";
 
 const MyBookings = async () => {
   const bookingCollection = dbConnect(collectionsNameObj.bookingsCollection);
   const bookings = await bookingCollection.find().toArray();
+  console.log(bookings, "page.jsx", 8);
 
   return (
     <div className="min-h-screen w-full bg-black relative text-white">
@@ -65,9 +67,12 @@ const MyBookings = async () => {
 
                   {/* Actions */}
                   <td className="px-6 py-4 flex justify-center gap-3">
-                    <button className="px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-600 to-cyan-800 hover:from-cyan-500 hover:to-cyan-700 transition text-white shadow-md shadow-cyan-900/50">
+                    <Link
+                      href={`my-bookings/${b.service_id}`}
+                      className="px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-600 to-cyan-800 hover:from-cyan-500 hover:to-cyan-700 transition text-white shadow-md shadow-cyan-900/50"
+                    >
                       Update
-                    </button>
+                    </Link>
                     <button className="px-4 py-2 rounded-xl bg-gradient-to-r from-red-700 to-red-900 hover:from-red-600 hover:to-red-800 transition text-white shadow-md shadow-red-900/50">
                       Delete
                     </button>

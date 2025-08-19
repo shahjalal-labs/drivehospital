@@ -61,7 +61,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
-            <details className="dropdown">
+            <details className="dropdown dropdown-end ">
               <summary className="btn btn-ghost p-2 text-gray-300">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +78,11 @@ const Navbar = () => {
                   />
                 </svg>
               </summary>
-              <ul className="menu dropdown-content bg-gray-900/95 backdrop-blur-md rounded-lg shadow-lg mt-3 w-48 p-2 space-y-2">
+              <ul
+                className="menu dropdown-content bg-gray-900/95 backdrop-blur-md rounded-lg shadow-lg mt-3 w-48 p-2 space-y-2 
+             border border-purple-500 
+             shadow-[0_0_15px_rgba(168,85,247,0.7)]"
+              >
                 {navLinks.map((link) => (
                   <li key={link.name}>
                     <Link

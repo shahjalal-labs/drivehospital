@@ -5,7 +5,7 @@ import Link from "next/link";
 const MyBookings = async () => {
   const bookingCollection = dbConnect(collectionsNameObj.bookingsCollection);
   const bookings = await bookingCollection.find().toArray();
-  console.log(bookings, "page.jsx", 8);
+  // console.log(bookings, "page.jsx", 8);
 
   return (
     <div className="min-h-screen w-full bg-black relative text-white">

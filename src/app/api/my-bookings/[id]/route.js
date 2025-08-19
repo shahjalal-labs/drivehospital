@@ -9,12 +9,12 @@ export async function GET(req, { params }) {
     const bookingDetails = await dbConnect(
       collectionsNameObj.bookingsCollection,
     ).findOne({ _id: new ObjectId(id) });
-    console.log(
-      bookingDetails,
-      "[1;31mbookingDetails in route.js at line 8[0m",
-    );
+    return NextResponse.json({
+      success: true,
+      status: 200,
+      data: bookingDetails,
+    });
   } catch (error) {
-    console.log(error, "[1;31merror in route.js at line 10[0m");
     return NextResponse.json({
       success: false,
       status: 400,

@@ -68,7 +68,7 @@ const MyBookings = async () => {
                   {/* Actions */}
                   <td className="px-6 py-4 flex justify-center gap-3">
                     <Link
-                      href={`my-bookings/${b.service_id}`}
+                      href={`my-bookings/${b._id}`}
                       className="px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-600 to-cyan-800 hover:from-cyan-500 hover:to-cyan-700 transition text-white shadow-md shadow-cyan-900/50"
                     >
                       Update

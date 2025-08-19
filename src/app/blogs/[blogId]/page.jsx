@@ -1,10 +1,9 @@
-import Image from "next/image";
+// app/blog/static-blog/page.jsx
 import Link from "next/link";
 import { format } from "date-fns";
 
-const mockBlogPosts = [
-  {
-    id: "maintain-engine-efficiently",
+const BlogsDetails = () => {
+  const blog = {
     title: "How to Maintain Your Car Engine Efficiently",
     cover: "https://i.ibb.co/5MvmD2g/88.jpg",
     author: "Md. Shahjalal",
@@ -20,41 +19,7 @@ Maintaining your car engine is critical for performance and longevity. Here are 
 6. **Professional Diagnostics:** Schedule annual check-ups for preventive maintenance.
     `,
     tags: ["engine", "maintenance", "car", "tips"],
-  },
-  {
-    id: "top-5-car-services",
-    title: "Top 5 Car Services You Should Never Skip",
-    cover: "https://i.ibb.co/wh7t3N3/555.jpg",
-    author: "Md. Shahjalal",
-    date: "2025-08-18",
-    content: `
-Regular services prevent expensive repairs. The top 5 essential car services include:
-
-1. **Oil & Filter Change**
-2. **Brake Inspection**
-3. **Tire Rotation and Alignment**
-4. **Battery Check**
-5. **Coolant & Fluid Replacement**
-Stay proactive to keep your car safe and reliable.
-    `,
-    tags: ["car service", "safety", "maintenance"],
-  },
-  // Add more mock posts as needed
-];
-
-const BlogsDetails = async ({ params }) => {
-  const { blogId } = await params;
-  console.log(blogId, "dynamicId in params", 3);
-
-  const blog = mockBlogPosts.find((b) => b.id === blogId);
-
-  if (!blog) {
-    return (
-      <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
-        <h2 className="text-2xl font-bold">Blog not found</h2>
-      </div>
-    );
-  }
+  };
 
   return (
     <div className="min-h-screen bg-gray-900 text-gray-200 px-6 lg:px-20 py-12">
@@ -90,7 +55,7 @@ const BlogsDetails = async ({ params }) => {
       {/* Blog Content */}
       <div className="prose prose-invert max-w-3xl mx-auto text-gray-300">
         {blog.content.split("\n").map((line, idx) =>
-          line.startsWith("1.") || line.startsWith("2.") ? (
+          line.match(/^\d\./) ? (
             <ul key={idx} className="list-disc list-inside mb-2">
               {line
                 .split(/\d\.\s/)

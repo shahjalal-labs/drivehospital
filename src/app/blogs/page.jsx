@@ -90,7 +90,7 @@ export default function BlogPage() {
                 <span>{post.author}</span>
                 <span>{format(new Date(post.date), "MMM dd, yyyy")}</span>
               </div>
-              <Link href={`/blogs/${post.id}`}>
+              <Link href={`/blogs/${post.slug}`}>
                 <button className="mt-4 px-4 py-2 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 transition text-white text-sm shadow-md shadow-pink-900/40">
                   Read More
                 </button>

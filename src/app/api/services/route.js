@@ -23,5 +23,5 @@ export const POST = async (request) => {
     body,
   );
   console.log(res, "[1;31mres in route.js at line 23[0m");
-  return NextResponse.json(body);
+  return NextResponse.json(res);
 };

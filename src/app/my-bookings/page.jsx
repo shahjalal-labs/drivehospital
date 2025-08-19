@@ -17,7 +17,7 @@ const MyBookings = async () => {
       />
 
       {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-12">
+      <div className="relative z-10 max--6xl mx-auto px-6 py-12">
         <h1 className="text-3xl font-bold text-cyan-300 mb-8">My Bookings</h1>
 
         <div className="overflow-x-auto rounded-2xl shadow-lg shadow-cyan-900/40">

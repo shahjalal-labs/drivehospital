@@ -1,6 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 export default function CheckoutForm({ service }) {
   const router = useRouter();
@@ -38,7 +39,11 @@ export default function CheckoutForm({ service }) {
 
     const respone = await res.json();
     if (respone?.insertedId) {
-      router.push(`/my-bookings`);
+      alert("Booking Successful!");
+      toast.success("Booking Successful!");
+      setTimeout(() => {
+        router.push(`/my-bookings`);
+      }, 1500);
     }
     console.log(respone, "respone CheckoutForm.jsx", 38);
   };

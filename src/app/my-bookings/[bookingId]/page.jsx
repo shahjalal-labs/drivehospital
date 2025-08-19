@@ -1,8 +1,11 @@
+import BookingUpdateForm from "../components/BookingUpdateForm";
+
 const BookingUpdate = async ({ params }) => {
   const p = await params;
-  console.log(p.bookingId, "dynamicId in params", 3);
 
-  const res = await fetch(`http://localhost:3000/api/my-bookings/:id`);
+  const res = await fetch(
+    `http://localhost:3000/api/my-bookings/${p.bookingId}`,
+  );
 
   const bookingData = await res.json();
 
@@ -12,6 +15,7 @@ const BookingUpdate = async ({ params }) => {
   return (
     <div>
       <h2>BoongUpdate</h2>
+      <BookingUpdateForm />
     </div>
   );
 };

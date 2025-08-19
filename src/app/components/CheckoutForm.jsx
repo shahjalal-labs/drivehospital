@@ -39,7 +39,6 @@ export default function CheckoutForm({ service }) {
 
     const respone = await res.json();
     if (respone?.insertedId) {
-      alert("Booking Successful!");
       toast.success("Booking Successful!");
       setTimeout(() => {
         router.push(`/my-bookings`);

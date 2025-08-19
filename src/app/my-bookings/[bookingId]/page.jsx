@@ -18,7 +18,7 @@ const BookingUpdate = async ({ params }) => {
 
   return (
     <div className="min-h-screen bg-gray-900 text-gray-200 px-6 py-12">
-      <h1 className="text-3xl md:text-4xl font-bold text-purple-400 mb-6">
+      <h1 className="text-3xl md:text-4xl font-bold text-purple-400 mb-6 text-center">
         Update Booking
       </h1>
 

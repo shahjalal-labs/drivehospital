@@ -46,10 +46,14 @@ const BookingUpdateForm = ({ booking }) => {
 
   return (
     <>
-      <div className="flex">
+      <div className="lg:flex justify-around">
+        <div className="max-w-[600px] flex justify-center items-center">
+          <LottieAnime anime={updateLottie} />
+        </div>
+
         <form
           onSubmit={handleSubmit}
-          className="max--3xl mx-auto bg-gray-800 p-6 rounded-2xl shadow-lg space-y-6"
+          className="max-w-[800px] x-auto bg-gray-800 p-6 rounded-2xl shadow-lg space-y-6"
         >
           <h2 className="text-2xl font-bold text-purple-400 mb-4">
             Booking Details
@@ -122,9 +126,6 @@ const BookingUpdateForm = ({ booking }) => {
             Update Booking
           </button>
         </form>
-        <div>
-          <LottieAnime anime={updateLottie} />
-        </div>
       </div>
     </>
   );

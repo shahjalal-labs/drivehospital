@@ -1,15 +1,15 @@
-import dbConnect from "@/lib/dbConnect";
+import dbConnect, { collectionsNameObj } from "@/lib/dbConnect";
+import { NextResponse } from "next/server";
 
-const GET = async () => {
+export const GET = async () => {
+  console.log(`router hitted`);
   const bookings = await dbConnect(collectionsNameObj.bookingsCollection)
     .find()
     .toArray();
-  console.log(bookings, "route.js", 5);
+  console.log(bookings, " route  route.js", 5);
   return NextResponse.json({
     success: true,
     status: 200,
     data: bookings,
   });
 };
-
-export default GET;

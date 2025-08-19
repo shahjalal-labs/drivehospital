@@ -15,7 +15,7 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="text-center mb-16">
         <motion.img
-          src="/assets/Banner.jpg"
+          src="https://i.ibb.co.com/Kj9V8674/profile-Rounded.png"
           alt="Md Shahjalal"
           className="mx-auto w-32 h-32 rounded-full border-4 border-cyan-500 shadow-lg"
           initial={{ scale: 0.8, opacity: 0 }}

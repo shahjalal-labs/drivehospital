@@ -1,5 +1,7 @@
 // app/about/page.jsx
 
+import Link from "next/link";
+
 export default function AboutPage() {
   return (
     <div className="min-h-screen w-full bg-[#0f172a] relative text-white">
@@ -146,11 +148,11 @@ export default function AboutPage() {
           <p className="text-gray-400 mt-2">
             Book your service today and keep your vehicle at its best.
           </p>
-          <a href="/services">
+          <Link href="/services">
             <button className="mt-6 px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 transition text-white shadow-lg shadow-pink-900/40">
               Book a Service
             </button>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

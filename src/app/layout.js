@@ -47,7 +47,7 @@ export default function RootLayout({ children }) {
           />
 
           {/* Content Layer */}
-          <div className="relative z-10 max-w-11/12 mx-auto min-h-[60vh]">
+          <div className="relative z-10 max-w-11/12 mx-auto min-h-[60vh] px-4 sm:px-6 lg:px-8">
             {children}
           </div>
 

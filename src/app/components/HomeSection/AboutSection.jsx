@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function AboutSection() {
   return (
-    <section className="grid md:grid-cols-2 gap-12 items-center">
+    <section className="grid md:grid-cols-2 gap-12 items-center ">
       <img
         src="https://i.ibb.co/R6Z2nFM/55.jpg"
         alt="About"

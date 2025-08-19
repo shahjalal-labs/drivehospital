@@ -1,14 +1,24 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import {
+  Home,
+  Info,
+  Briefcase,
+  BookOpen,
+  CalendarCheck,
+  Phone,
+  LogIn,
+  UserPlus,
+} from "lucide-react";
 
 const navLinks = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Services", href: "/services" },
-  { name: "Blogs", href: "/blogs" },
-  { name: "My Bookings", href: "/my-bookings" },
-  { name: "Contact Us", href: "/contact" },
+  { name: "Home", href: "/", icon: Home },
+  { name: "About", href: "/about", icon: Info },
+  { name: "Services", href: "/services", icon: Briefcase },
+  { name: "Blogs", href: "/blogs", icon: BookOpen },
+  { name: "My Bookings", href: "/my-bookings", icon: CalendarCheck },
+  { name: "Contact Us", href: "/contact", icon: Phone },
 ];
 
 const Navbar = () => {
@@ -61,7 +71,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
-            <details className="dropdown dropdown-end ">
+            <details className="dropdown dropdown-end">
               <summary className="btn btn-ghost p-2 text-gray-300">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -79,33 +89,44 @@ const Navbar = () => {
                 </svg>
               </summary>
               <ul
-                className="menu dropdown-content bg-gray-900/95 backdrop-blur-md rounded-lg shadow-lg mt-3 w-48 p-2 space-y-2 
-             border border-purple-500 
-             shadow-[0_0_15px_rgba(168,85,247,0.7)]"
+                className="menu dropdown-content bg-gray-900/95 backdrop-blur-md rounded-lg shadow-lg mt-3 w-56 p-2 space-y-2 
+                border border-purple-500 shadow-[0_0_15px_rgba(168,85,247,0.7)]"
               >
-                {navLinks.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      className={`${pathname === link.href ? "text-cyan-400 font-semibold" : "text-gray-300 hover:text-cyan-300"}`}
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
+                {navLinks.map((link) => {
+                  const Icon = link.icon;
+                  return (
+                    <li key={link.name}>
+                      <Link
+                        href={link.href}
+                        className={`flex items-center gap-2 ${
+                          pathname === link.href
+                            ? "text-cyan-400 font-semibold"
+                            : "text-gray-300 hover:text-cyan-300"
+                        }`}
+                      >
+                        <Icon className="w-5 h-5" />
+                        {link.name}
+                      </Link>
+                    </li>
+                  );
+                })}
+
+                {/* Auth Buttons in Mobile */}
                 <li className="pt-2 border-t border-gray-700">
                   <Link
                     href="/auth/signin"
-                    className="text-gray-300 hover:text-cyan-300"
+                    className="flex items-center gap-2 text-gray-300 hover:text-cyan-300"
                   >
+                    <LogIn className="w-5 h-5" />
                     Sign In
                   </Link>
                 </li>
                 <li>
                   <Link
                     href="/auth/register"
-                    className="text-gray-300 hover:text-cyan-300"
+                    className="flex items-center gap-2 text-gray-300 hover:text-cyan-300"
                   >
+                    <UserPlus className="w-5 h-5" />
                     Register
                   </Link>
                 </li>

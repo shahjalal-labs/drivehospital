@@ -11,7 +11,7 @@ import {
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-black text-gray-200 px-6 lg:px-20 py-12">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-black text-gray-200 px-4 sm:px-6 lg:px-8 py-12">
       {/* Hero Section */}
       <section className="text-center mb-16">
         <motion.img

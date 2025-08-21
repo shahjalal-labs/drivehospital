@@ -40,7 +40,7 @@ export default function SignupForm() {
         <label className="block font-medium">Name</label>
         <input
           type="text"
-          name="name"
+          name="username"
           placeholder="Enter your name"
           required
           className="input input-bordered w-full mt-1"

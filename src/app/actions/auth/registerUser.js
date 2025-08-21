@@ -9,4 +9,14 @@ export const registerUser = async (payload) => {
   if (!email || !password) return null;
 
   const user = await userCollection.findOne({ email });
+  if (!user) {
+    const hashedPassword = await bcrypt.hash(password, 10);
+    payload.password = hashedPassword;
+    const result = await userCollection.insertOne(payload);
+    return {
+      ...result,
+      insertedId: result.insertedId.toString(),
+    };
+  }
+  return null;
 };

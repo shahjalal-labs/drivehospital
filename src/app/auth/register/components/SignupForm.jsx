@@ -2,6 +2,7 @@
 
 import { registerUser } from "@/app/actions/auth/registerUser";
 import React from "react";
+import toast from "react-hot-toast";
 // import { registerUser } from "@/app/actions/auth/registerUser";
 
 export default function SignupForm() {
@@ -9,7 +10,7 @@ export default function SignupForm() {
     e.preventDefault();
 
     const form = e.target;
-    const name = form.name.value;
+    const username = form.username.value;
     const email = form.email.value;
     const password = form.password.value;
 
@@ -18,10 +19,11 @@ export default function SignupForm() {
       const res = await registerUser({ username, email, password });
 
       if (res?.insertedId) {
-        toas;
-        form.reset();
+        toast.success("Registration successful!");
       } else {
-        alert("❌ Registration failed: " + (res?.message || "Unknown error"));
+        toast.error(
+          "Registration failed: " + (res?.message || "Unknown error"),
+        );
       }
     } catch (err) {
       console.error("Registration error:", err);

@@ -1,5 +1,6 @@
 "use client";
 
+import { registerUser } from "@/app/actions/auth/registerUser";
 import React from "react";
 // import { registerUser } from "@/app/actions/auth/registerUser";
 
@@ -12,13 +13,12 @@ export default function SignupForm() {
     const email = form.email.value;
     const password = form.password.value;
 
-    console.log(`name: ${name}, email: ${email}, password: ${password}`);
-    /* try {
+    try {
       // Call your server action
-      const res = await registerUser({ name, email, password });
+      const res = await registerUser({ username, email, password });
 
-      if (res?.success) {
-        alert("✅ User registered successfully!");
+      if (res?.insertedId) {
+        toas;
         form.reset();
       } else {
         alert("❌ Registration failed: " + (res?.message || "Unknown error"));
@@ -26,7 +26,7 @@ export default function SignupForm() {
     } catch (err) {
       console.error("Registration error:", err);
       alert("⚠️ Something went wrong.");
-    } */
+    }
   };
 
   return (

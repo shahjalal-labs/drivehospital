@@ -13,6 +13,7 @@ export const loginUser = async (payload) => {
 
   // const isPasswordOK = await bcrypt.compare(user.password, password);
   const isPasswordOK = await bcrypt.compare(password, user.password);
+  console.log(isPasswordOK, "loginUser.js", 16);
 
   if (!isPasswordOK) return null;
 

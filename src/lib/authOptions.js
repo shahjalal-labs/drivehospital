@@ -1,3 +1,4 @@
+import { loginUser } from "@/app/actions/auth/loginUser";
 import GithubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
 
@@ -21,7 +22,7 @@ export const authOptions = {
       // e.g. domain, username, password, 2FA token, etc.
       // You can pass any HTML attribute to the <input> tag through the object.
       credentials: {
-        email: { label: "Email", type: "text", placeholder: "you@example.com" },
+        email: { label: "Email", placeholder: "you@example.com" },
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials, req) {
@@ -30,7 +31,7 @@ export const authOptions = {
           "[1;31mcredentials in authOptions.js at line 28[0m",
         );
         // Add logic here to look up the user from the credentials supplied
-        const user = "";
+        const user = await loginUser(credentials);
 
         if (user) {
           // Any object returned will be saved in `user` property of the JWT

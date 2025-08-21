@@ -47,7 +47,7 @@ const BookingUpdateForm = ({ booking }) => {
   return (
     <>
       <div className="lg:flex justify-around">
-        <div className="max-w-[600px] flex justify-center items-center">
+        <div className="max-w-[600px] max-lg:mx-auto flex justify-center items-center">
           <LottieAnime anime={updateLottie} />
         </div>
 

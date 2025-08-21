@@ -1,5 +1,5 @@
 "use client";
-
+import { signIn } from "next-auth/react";
 import React from "react";
 import toast from "react-hot-toast";
 
@@ -14,6 +14,19 @@ export default function SignInForm() {
       email,
       password,
     });
+
+    try {
+      const res = await signIn("credentials", {
+        email,
+        password,
+      });
+      if (res?.ok) {
+        toast.success("Sign in successful!");
+      }
+    } catch (error) {
+      toast.error("Sign in failed: " + (error?.message || "Unknown error"));
+      console.log("error from signin ", error);
+    }
   };
 
   return (

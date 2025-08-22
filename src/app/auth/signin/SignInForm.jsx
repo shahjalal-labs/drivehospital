@@ -41,7 +41,7 @@ export default function SignInForm() {
   return (
     <form
       onSubmit={handleSignIn}
-      className="w-full max-w-md mx-auto space-y-6 p-6 border rounded-lg shadow border-purple-500"
+      className="space-y-6 p-6 border rounded-lg shadow border-purple-500"
     >
       <h2 className="text-2xl font-bold text-center">Sign In</h2>
 

@@ -1,4 +1,5 @@
 "use client";
+import { useSession } from "next-auth/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -23,7 +24,8 @@ const navLinks = [
 
 const Navbar = () => {
   const pathname = usePathname();
-
+  const { data: session, status } = useSession();
+  console.log(session, status, "session Navbar.jsx", 28);
   return (
     <nav className="max-w-11/12 mx-auto sticky top-0 z-50 bg-gray-900/70 backdrop-blur-lg border-b border-gray-800 shadow-md">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,20 +55,28 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Auth Buttons */}
+          {/* Auth Buttons desktop */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Link
-              href="/auth/signin"
-              className="px-4 py-2 rounded-full border border-cyan-400 text-cyan-400 hover:bg-cyan-500 hover:text-white transition"
-            >
-              Sign In
-            </Link>
-            <Link
-              href="/auth/register"
-              className="px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:opacity-90 transition"
-            >
-              Register
-            </Link>
+            <p>
+              <li className="pt-2 border-t border-gray-700">
+                <Link
+                  href="/auth/signin"
+                  className="flex items-center gap-2 text-gray-300 hover:text-cyan-300"
+                >
+                  <LogIn className="w-5 h-5" />
+                  Sign In
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/auth/register"
+                  className="flex items-center gap-2 text-gray-300 hover:text-cyan-300"
+                >
+                  <UserPlus className="w-5 h-5" />
+                  Register
+                </Link>
+              </li>
+            </p>
           </div>
 
           {/* Mobile Menu Button */}
@@ -110,26 +120,31 @@ const Navbar = () => {
                     </li>
                   );
                 })}
-
                 {/* Auth Buttons in Mobile */}
-                <li className="pt-2 border-t border-gray-700">
-                  <Link
-                    href="/auth/signin"
-                    className="flex items-center gap-2 text-gray-300 hover:text-cyan-300"
-                  >
-                    <LogIn className="w-5 h-5" />
-                    Sign In
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/auth/register"
-                    className="flex items-center gap-2 text-gray-300 hover:text-cyan-300"
-                  >
-                    <UserPlus className="w-5 h-5" />
-                    Register
-                  </Link>
-                </li>
+                {status === "authenticated" ? (
+                  "logged in"
+                ) : (
+                  <p>
+                    <li className="pt-2 border-t border-gray-700">
+                      <Link
+                        href="/auth/signin"
+                        className="flex items-center gap-2 text-gray-300 hover:text-cyan-300"
+                      >
+                        <LogIn className="w-5 h-5" />
+                        Sign In
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/auth/register"
+                        className="flex items-center gap-2 text-gray-300 hover:text-cyan-300"
+                      >
+                        <UserPlus className="w-5 h-5" />
+                        Register
+                      </Link>
+                    </li>
+                  </p>
+                )}
               </ul>
             </details>
           </div>

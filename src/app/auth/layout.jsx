@@ -1,6 +1,7 @@
 "use client";
 import LottieAnime from "@/lib/LottieAnime";
 import AuthLottieJson from "@/authLottie.json";
+import SocialLogin from "./components/SocialLogin";
 export const Authlayout = ({ children }) => {
   return (
     <div className="flex justify-center items-center min-h-[70vh]">

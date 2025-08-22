@@ -1,5 +1,6 @@
 "use client";
 import { signIn } from "next-auth/react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React from "react";
 import toast from "react-hot-toast";
@@ -73,6 +74,12 @@ export default function SignInForm() {
       >
         Sign In
       </button>
+      <p className="underline">
+        Don't have an account?{" "}
+        <Link href="/auth/register" className="text-blue-500">
+          Register now
+        </Link>
+      </p>
     </form>
   );
 }

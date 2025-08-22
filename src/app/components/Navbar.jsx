@@ -12,6 +12,7 @@ import {
   LogIn,
   UserPlus,
 } from "lucide-react";
+import useAuth from "@/lib/useAuth";
 
 const navLinks = [
   { name: "Home", href: "/", icon: Home },
@@ -24,7 +25,7 @@ const navLinks = [
 
 const Navbar = () => {
   const pathname = usePathname();
-  const { data: session, status } = useSession();
+  const { session, status } = useAuth();
   console.log(session, status, "session Navbar.jsx", 28);
   return (
     <nav className="max-w-11/12 mx-auto sticky top-0 z-50 bg-gray-900/70 backdrop-blur-lg border-b border-gray-800 shadow-md">
@@ -57,26 +58,24 @@ const Navbar = () => {
 
           {/* Auth Buttons desktop */}
           <div className="hidden lg:flex items-center space-x-4">
-            <p>
-              <li className="pt-2 border-t border-gray-700">
+            {status === "authenticated" ? (
+              "logged in"
+            ) : (
+              <>
                 <Link
                   href="/auth/signin"
-                  className="flex items-center gap-2 text-gray-300 hover:text-cyan-300"
+                  className="px-4 py-2 rounded-full border border-cyan-400 text-cyan-400 hover:bg-cyan-500 hover:text-white transition"
                 >
-                  <LogIn className="w-5 h-5" />
                   Sign In
                 </Link>
-              </li>
-              <li>
                 <Link
                   href="/auth/register"
-                  className="flex items-center gap-2 text-gray-300 hover:text-cyan-300"
+                  className="px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:opacity-90 transition"
                 >
-                  <UserPlus className="w-5 h-5" />
                   Register
                 </Link>
-              </li>
-            </p>
+              </>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -124,7 +123,7 @@ const Navbar = () => {
                 {status === "authenticated" ? (
                   "logged in"
                 ) : (
-                  <p>
+                  <>
                     <li className="pt-2 border-t border-gray-700">
                       <Link
                         href="/auth/signin"
@@ -143,7 +142,7 @@ const Navbar = () => {
                         Register
                       </Link>
                     </li>
-                  </p>
+                  </>
                 )}
               </ul>
             </details>

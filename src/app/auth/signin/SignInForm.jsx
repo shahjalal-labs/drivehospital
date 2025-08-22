@@ -1,9 +1,11 @@
 "use client";
 import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
 import React from "react";
 import toast from "react-hot-toast";
 
 export default function SignInForm() {
+  const router = useRouter();
   const handleSignIn = async (e) => {
     e.preventDefault();
 
@@ -19,9 +21,16 @@ export default function SignInForm() {
       const res = await signIn("credentials", {
         email,
         password,
+        // callbackUrl: "/",
+        redirect: false,
       });
+      console.log(res, "[1;31mres in SignInForm.jsx at line 20[0m");
+
       if (res?.ok) {
         toast.success("Sign in successful!");
+        setTimeout(() => {
+          router.push("/");
+        }, 1500);
       }
     } catch (error) {
       toast.error("Sign in failed: " + (error?.message || "Unknown error"));

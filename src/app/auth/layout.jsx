@@ -3,13 +3,16 @@ import LottieAnime from "@/lib/LottieAnime";
 import AuthLottieJson from "@/authLottie.json";
 export const Authlayout = ({ children }) => {
   return (
-    <div className="pb-10 border">
-      <h2>Auth Layout</h2>
-      <div className="lg:flex  ">
-        <div className="max-w-[450px] mx-auto">
-          <LottieAnime anime={AuthLottieJson} />
+    <div className="flex justify-center items-center min-h-[70vh]">
+      <div className="max-w-6xl mx-auto order">
+        <div className="lg:flex  ">
+          <div className="max-w-[450px] mx-auto">
+            <LottieAnime anime={AuthLottieJson} />
+          </div>
+          <div className="lg:w-[450px] max-w-[450px] mx-auto flex justify-center items-center ">
+            {children}
+          </div>
         </div>
-        <div className="max-w-[450px] mx-auto border">{children}</div>
       </div>
     </div>
   );

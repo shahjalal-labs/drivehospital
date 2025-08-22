@@ -2,8 +2,7 @@ import SignupForm from "./components/SignupForm";
 
 const RegisterPage = () => {
   return (
-    <div>
-      <h1>Register Page</h1>
+    <div className="w-full">
       <SignupForm />
     </div>
   );

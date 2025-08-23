@@ -26,7 +26,14 @@
 │   ├── app
 │   │   ├── about
 │   │   │   └── page.jsx
+│   │   ├── actions
+│   │   │   └── auth
+│   │   │       ├── loginUser.js
+│   │   │       └── registerUser.js
 │   │   ├── api
+│   │   │   ├── auth
+│   │   │   │   └── [...nextauth]
+│   │   │   │       └── route.js
 │   │   │   ├── my-bookings
 │   │   │   │   ├── [id]
 │   │   │   │   │   ├── [bookingAPI].hurl
@@ -39,6 +46,18 @@
 │   │   │       │   └── [serviceAPI].hurl
 │   │   │       ├── route.js
 │   │   │       └── servicesAPI.hurl
+│   │   ├── auth
+│   │   │   ├── components
+│   │   │   │   └── SocialLogin.jsx
+│   │   │   ├── layout.jsx
+│   │   │   ├── refractorAuthPrompt.md
+│   │   │   ├── register
+│   │   │   │   ├── components
+│   │   │   │   │   └── SignupForm.jsx
+│   │   │   │   └── page.jsx
+│   │   │   └── signin
+│   │   │       ├── page.jsx
+│   │   │       └── SignInForm.jsx
 │   │   ├── blogs
 │   │   │   ├── [blogId]
 │   │   │   │   └── page.jsx
@@ -57,6 +76,7 @@
 │   │   │   │   ├── TestimonialsSection.jsx
 │   │   │   │   └── WhyChooseUs.jsx
 │   │   │   ├── Navbar.jsx
+│   │   │   ├── NotFoundAnime.jsx
 │   │   │   ├── OrderReview.jsx
 │   │   │   ├── ServiceCard.jsx
 │   │   │   └── ServicesSection.jsx
@@ -64,30 +84,35 @@
 │   │   │   └── page.jsx
 │   │   ├── favicon.ico
 │   │   ├── globals.css
-│   │   ├── layout.js
+│   │   ├── layout.jsx
 │   │   ├── loading.jsx
 │   │   ├── my-bookings
 │   │   │   ├── [bookingId]
 │   │   │   │   └── page.jsx
 │   │   │   ├── components
-│   │   │   │   └── BookingUpdateForm.jsx
+│   │   │   │   ├── BookingUpdateForm.jsx
+│   │   │   │   └── UpdateLottieAnime.jsx
 │   │   │   └── page.jsx
 │   │   ├── not-found.jsx
 │   │   ├── page.js
-│   │   ├── register
-│   │   │   └── page.jsx
 │   │   └── services
 │   │       ├── [id]
 │   │       │   └── page.jsx
 │   │       └── page.jsx
+│   ├── authLottie.json
 │   ├── docs
 │   │   └── cli_commands.md
 │   ├── lib
+│   │   ├── authOptions.js
 │   │   ├── dbConnect.js
-│   │   └── LottieAnime.jsx
+│   │   ├── LottieAnime.jsx
+│   │   └── useAuth.jsx
+│   ├── notfoundLottie.json
+│   ├── providers
+│   │   └── NextAuthProvider.jsx
 │   └── updateLottie.json
 └── structure.md
 
-27 directories, 59 files
+36 directories, 75 files
 
 ```
